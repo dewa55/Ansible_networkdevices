@@ -1,0 +1,7 @@
+- name: Change description on port Ethernet5/1
+  hosts: all
+  nxos_interfaces:
+    config:
+      - name: Ethernet5/1
+        description: 'Configured by Ansible'
+    state: merged
