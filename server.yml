@@ -1,5 +1,5 @@
 - name: Touch a file, using symbolic modes to set the permissions (equivalent to 0644)
-  host: all
+  hosts: all
   file:
     path: /tmp/ansible.txt
     state: touch
