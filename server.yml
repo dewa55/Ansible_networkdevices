@@ -1,0 +1,7 @@
+- name: Create a file on server
+  hosts: all
+  tasks:
+    copy:
+      dest: "/tmp/ansible.txt"
+      content: |
+        Created by Ansible

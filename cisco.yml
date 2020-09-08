@@ -1,0 +1,6 @@
+- name: Configure interface settings
+  hosts: all 
+  ios_config:
+    lines:
+      - description Configured by ansible
+    parents: interface Ethernet1
