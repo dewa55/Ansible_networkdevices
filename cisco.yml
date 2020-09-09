@@ -4,9 +4,7 @@
   tasks:
   - name: Configure interface settings 
     ios_interfaces:
-      config:
-        - name: GigabitEthernet2/0/4
-          description: 'Configured by Ansible Network'
-      state: merged
+      name: GigabitEthernet2/0/4
+      description: Configured-by-Ansible Network
       authorize: yes 
       auth_pass: Deni1234
