@@ -1,6 +1,13 @@
-- name: Hello World Sample
+- name: Create a file
   hosts: all
+  become: yes
+
   tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
+  - name: Create a file in /tmp
+    file:
+      path: /tmp/ansible.txt
+      state: touch 
+  - name: Add a line in file
+    lineinfile:
+      path: /tmp/ansible.txt
+      line: "Created by ansible"
