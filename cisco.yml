@@ -5,8 +5,8 @@
   tasks:
   - name: Configure interface settings 
     ios_config:
-      become: yes 
-      become_pass: Deni1234
+      authorize: yes 
+      auth_pass: Deni1234
       lines:
         - description test interface
       parents: interface GigabitEthernet2/0/4
