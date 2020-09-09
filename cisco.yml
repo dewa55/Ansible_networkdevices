@@ -1,10 +1,12 @@
-- name: Change description on Nexus
+- name: Change description on Cisco interface
   hosts: all
   gather_facts: yes
 
   tasks:
   - name: Configure interface settings 
-    ios_command:
+    ios_config:
       authorize: yes 
       auth_pass: Deni1234
-      commands: show version
+      lines:
+        - description test interface
+      parents: interface GigabitEthernet2/0/4
