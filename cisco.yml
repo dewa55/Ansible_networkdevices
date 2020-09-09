@@ -2,8 +2,6 @@
   hosts: all
   become_method: enable
   gather_facts: yes
-  authorize: yes 
-  auth_pass: Deni1234
 
   tasks:
   - name: Configure interface settings 
