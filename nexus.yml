@@ -1,7 +1,11 @@
-- name: Change description on port Ethernet5/1
+- name: Change description on Nexus
   hosts: all
-  nxos_interfaces:
-    config:
+  become: yes
+
+  tasks:
+  - name: Change description on port Ethernet5/1
+    nxos_interfaces:
+      config:
       - name: Ethernet5/1
         description: 'Configured by Ansible'
-    state: merged
+        state: merged
