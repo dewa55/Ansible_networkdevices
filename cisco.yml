@@ -2,6 +2,9 @@
   hosts: all
   become_method: enable
   gather_facts: yes
+  vars_prompt:
+  - name: "my_enable_password"
+    prompt: "Cisco auth_pass:"
 
   tasks:
   - name: Configure interface settings 
