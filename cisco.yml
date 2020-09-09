@@ -1,6 +1,9 @@
-- name: Configure interface settings
-  hosts: all 
-  ios_config:
-    lines:
-      - description Configured by ansible
-    parents: interface Ethernet1
+- name: Change description on Nexus
+  hosts: all
+  become: yes
+  tasks:
+  - name: Configure interface settings 
+    ios_config:
+      lines:
+        - description Configured by ansible
+      parents: interface Ethernet1
