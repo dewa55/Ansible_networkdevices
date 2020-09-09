@@ -3,7 +3,10 @@
   become: yes
   tasks:
   - name: Configure interface settings 
-    ios_config:
-      lines:
-        - description Configured by ansible
-      parents: interface Ethernet1
+    ios_interfaces:
+      config:
+        - name: GigabitEthernet2/0/4
+          description: 'Configured by Ansible Network'
+      state: merged
+      authorize: yes 
+      auth_pass: Deni1234
