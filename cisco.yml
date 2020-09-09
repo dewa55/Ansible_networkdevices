@@ -1,5 +1,6 @@
 - name: Change description on Cisco interface
   hosts: all
+  become_method: enable
   gather_facts: yes
 
   tasks:
