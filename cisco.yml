@@ -6,6 +6,6 @@
     ios_config:
       lines:
         - description test interface
-      parents: GigabitEthernet2/0/4
+      parents: interface GigabitEthernet2/0/4
       authorize: yes 
       auth_pass: Deni1234
