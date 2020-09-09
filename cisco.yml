@@ -3,8 +3,9 @@
   become: yes
   tasks:
   - name: Configure interface settings 
-    ios_interfaces:
-      name: GigabitEthernet2/0/4
-      description: Configured-by-Ansible Network
+    ios_config:
+      lines:
+        - description test interface
+      parents: GigabitEthernet2/0/4
       authorize: yes 
       auth_pass: Deni1234
