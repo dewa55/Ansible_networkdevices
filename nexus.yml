@@ -3,9 +3,9 @@
   become: yes
 
   tasks:
-  - name: Change description on port Ethernet5/1
+  - name: Change description on port Ethernet1/10
     nxos_interfaces:
       config:
-      - name: Ethernet5/1
+      - name: Ethernet1/10
         description: 'Configured by Ansible'
         state: merged
