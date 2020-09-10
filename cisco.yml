@@ -5,7 +5,8 @@
   - name: Configure interface settings 
     ios_config:
       authorize: yes 
-      password: 'Deni1234'
+      usenrame: ansible
+      password: Deni1234
       lines:
         - description test interface
       parents: interface GigabitEthernet2/0/4
