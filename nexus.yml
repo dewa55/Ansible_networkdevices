@@ -8,4 +8,4 @@
       config:
       - name: Ethernet1/10
         description: 'Configured by Ansible'
-        state: merged
+      state: merged
