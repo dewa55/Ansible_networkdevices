@@ -1,10 +1,14 @@
 - name: Change description on Cisco interface
   hosts: all
+  connection: network_cli
+  become_method: enable
+  gather_facts: yes
 
   tasks:
   - name: Configure interface settings 
-    ios_interfaces:
-      config:
-       - name: GigabitEthernet2/0/4
-         description: 'Configured and Merged by Ansible Network'
-      state: replaced
+    ios_config:
+      authorize: yes 
+      auth_pass: Deni1234
+      lines:
+        - description test interface
+      parents: interface GigabitEthernet2/0/4
