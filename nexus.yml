@@ -7,5 +7,5 @@
     nxos_interfaces:
       config:
       - name: Ethernet1/10
-        description: 'Configured by Ansible1'
+        description: 'Configured by Ansible2'
       state: merged
