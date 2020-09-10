@@ -1,13 +1,11 @@
 - name: Change description on Cisco interface
   hosts: all
-  authorize: yes 
-  auth_pass: 'Deni1234'
 
   tasks:
   - name: Configure interface settings 
     ios_config:
       authorize: yes 
-      auth_pass: 'Deni1234'
+      password: 'Deni1234'
       lines:
         - description test interface
       parents: interface GigabitEthernet2/0/4
