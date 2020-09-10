@@ -3,8 +3,6 @@
 
   tasks:
   - name: Configure interface settings 
-    ios_interfaces:
-      config:
-       - name: GigabitEthernet2/0/4
-         description: 'Configured and Merged by Ansible Network'
-      state: replaced
+    ios_interface:
+        name: GigabitEthernet2/0/4
+        description: test-interface
