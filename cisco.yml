@@ -1,5 +1,6 @@
 - name: Change description on Cisco interface
   hosts: all
+  connection: network_cli
   become_method: enable
   gather_facts: yes
 
