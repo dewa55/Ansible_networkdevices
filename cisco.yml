@@ -1,5 +1,6 @@
 - name: Change description on Cisco interface
   hosts: all
+  connection: local
 
   tasks:
   - name: Configure interface settings 
